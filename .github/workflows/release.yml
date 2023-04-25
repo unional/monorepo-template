@@ -1,0 +1,22 @@
+name: release
+on:
+  push:
+    branches: [main]
+
+jobs:
+  code:
+    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    with:
+      node-version: '[16, 18]'
+      pnpm-version: 8.3.1
+
+  release:
+    uses: unional/.github/.github/workflows/pnpm-release-changeset.yml@main
+    needs: code
+    secrets: inherit
+    with:
+      pnpm-version: 8.3.1
+
+  # docgen:
+  #     uses: unional/.github/.github/workflows/pnpm-docs.yml@main
+  #     needs: release

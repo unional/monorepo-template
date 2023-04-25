@@ -1,0 +1,9 @@
+ignores:
+  - '@repobuddy/*'
+  - '@size-limit/*'
+  - '@types/jest'
+  - eslint-*
+  - jest-*
+  - rimraf # https://github.com/depcheck/depcheck/issues/776
+  - size-limit
+  - ts-jest

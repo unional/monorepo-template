@@ -1,0 +1,57 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "*.ts",
+        "package.json",
+        "tsconfig*json"
+      ],
+      "outputs": [
+        "cjs",
+        "esm",
+        "*.tsbuildinfo"
+      ]
+    },
+    "clean": {
+      "cache": false
+    },
+    "coverage": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+    "depcheck": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "dev": {
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "nuke": {
+      "cache": false
+    },
+    "size": {
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ]
+    }
+  }
+}
