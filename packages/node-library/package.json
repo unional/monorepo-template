@@ -1,7 +1,8 @@
 {
-  "name": "new-package",
-  "version": "7.0.0",
-  "description": "Some description",
+  "name": "node-library",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Your awesome node library",
   "keywords": [],
   "homepage": "https://github.com/unional/monorepo-template",
   "bugs": {
@@ -10,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/unional/monorepo-template.git",
-    "directory": "packages/new-package"
+    "directory": "packages/node-library"
   },
   "license": "MIT",
   "author": {

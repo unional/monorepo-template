@@ -7,6 +7,16 @@ This is a template for nodejs library.
 
 Feel free to delete it if you don't need it.
 
+If you want to use it,
+update the `package.json` and this `README.md` file:
+
+- [ ] Update the `name` field in `package.json`
+- [ ] Remove the `private` field in `package.json`
+- [ ] Update the `description` field in `package.json`
+- [ ] Update the `homepage`, `bugs`, and `repository` field in `package.json`
+- [ ] Update the `keywords` field in `package.json`
+- [ ] Update the `author` field in `package.json`
+
 ## About this template
 
 It is a dual-package (CJS/ESM) library.
