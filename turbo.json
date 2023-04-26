@@ -32,9 +32,6 @@
         "^build"
       ]
     },
-    "dev": {
-      "cache": false
-    },
     "lint": {
       "dependsOn": [
         "^build"
