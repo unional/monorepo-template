@@ -1,6 +1,3 @@
-.turbo/
-cjs/
-coverage/
-esm/
 node_modules/
-tslib/
+packages/
+pnpm-lock.yaml
