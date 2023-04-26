@@ -1,11 +1,28 @@
 {
-	"cSpell.words": [
-		"depcheckrc",
-		"pinst",
-		"repobuddy",
-		"Snyk",
-		"tsbuddy",
-		"tsbuildinfo",
-		"turborepo"
-	]
+  "cSpell.words": [
+    "depcheckrc",
+    "pinst",
+    "repobuddy",
+    "Snyk",
+    "tsbuddy",
+    "tsbuildinfo",
+    "turborepo"
+  ],
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2,
+  "eslint.enable": true,
+  "files.trimTrailingWhitespace": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "tsconfig.*.json"
+      ],
+      "url": "http://json.schemastore.org/tsconfig"
+    }
+  ],
+  "prettier.useTabs": true,
+  "tsimporter.emitSemicolon": false,
+  "typescript.format.semicolons": "remove",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
