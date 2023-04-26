@@ -16,6 +16,8 @@ update the `package.json` and this `README.md` file:
 - [ ] Update the `homepage`, `bugs`, and `repository` field in `package.json`
 - [ ] Update the `keywords` field in `package.json`
 - [ ] Update the `author` field in `package.json`
+- [ ] Update the top-level `tsconfig.json` file
+- [ ] Update the top-level `README.md` file
 
 ## About this template
 
