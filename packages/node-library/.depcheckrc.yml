@@ -7,3 +7,4 @@ ignores:
   - rimraf                     # https://github.com/depcheck/depcheck/issues/776
   - size-limit                 # depcheck unable to recognize size-limit
   - ts-jest                    # depcheck unable to detect jest dependencies in `*.mjs` files
+  - tslib                      # depcheck doesn't recognize tslib.
