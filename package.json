@@ -7,7 +7,7 @@
     "coverage": "turbo run coverage",
     "cs": "changeset",
     "depcheck": "turbo run depcheck",
-    "lint": "run-p lint:root lint:repos",
+    "lint": "run-p lint:*",
     "lint:repos": "turbo run lint",
     "lint:root": "cross-env TIMING=1 eslint --ext=js,cjs,mjs,ts,tsx,ctx,mtx,yaml,yml .",
     "nl": "pnpm --filter=./packages/node-library",
