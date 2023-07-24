@@ -39,5 +39,5 @@
     "turbo": "1.10.9",
     "typescript": "^5.0.4"
   },
-  "packageManager": "pnpm@8.6.9"
+  "packageManager": "pnpm@8.6.10"
 }
