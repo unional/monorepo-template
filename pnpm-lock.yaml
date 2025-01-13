@@ -24,11 +24,11 @@ importers:
         specifier: ^8.39.0
         version: 8.39.0
       eslint-config-prettier:
-        specifier: ^9.0.0
-        version: 9.0.0(eslint@8.39.0)
+        specifier: ^10.0.0
+        version: 10.0.1(eslint@8.39.0)
       eslint-plugin-harmony:
         specifier: ^7.1.2
-        version: 7.1.2(@typescript-eslint/eslint-plugin@5.59.1(@typescript-eslint/parser@5.59.1(eslint@8.39.0)(typescript@5.0.4))(eslint@8.39.0)(typescript@5.0.4))(eslint-config-prettier@9.0.0(eslint@8.39.0))(eslint@8.39.0)(typescript@5.0.4)
+        version: 7.1.2(@typescript-eslint/eslint-plugin@5.59.1(@typescript-eslint/parser@5.59.1(eslint@8.39.0)(typescript@5.0.4))(eslint@8.39.0)(typescript@5.0.4))(eslint-config-prettier@10.0.1(eslint@8.39.0))(eslint@8.39.0)(typescript@5.0.4)
       eslint-plugin-yml:
         specifier: ~1.14.0
         version: 1.14.0(eslint@8.39.0)
@@ -1473,8 +1473,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@9.0.0:
-    resolution: {integrity: sha512-IcJsTkJae2S35pRsRAwoCE+925rJJStOdkKnLVgtE+tEpqU0EVVM7OqrwxqgptKdX29NUwC82I5pXsGFIgSevw==}
+  eslint-config-prettier@10.0.1:
+    resolution: {integrity: sha512-lZBts941cyJyeaooiKxAtzoPHTN+GbQTJFAIdQbRhA4/8whaAraEh47Whw/ZFfrjNSnlAxqfm9i0XVAEkULjCw==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -1510,6 +1510,7 @@ packages:
   eslint@8.39.0:
     resolution: {integrity: sha512-mwiok6cy7KTW7rBpo05k6+p4YVZByLNjAZ/ACB9DRCu4YDRwjXI01tWHp6KAUWelsBetTxKK/2sHB0vdS8Z2Og==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.5.1:
@@ -5027,11 +5028,11 @@ snapshots:
       eslint: 8.39.0
       semver: 7.6.0
 
-  eslint-config-prettier@9.0.0(eslint@8.39.0):
+  eslint-config-prettier@10.0.1(eslint@8.39.0):
     dependencies:
       eslint: 8.39.0
 
-  eslint-plugin-harmony@7.1.2(@typescript-eslint/eslint-plugin@5.59.1(@typescript-eslint/parser@5.59.1(eslint@8.39.0)(typescript@5.0.4))(eslint@8.39.0)(typescript@5.0.4))(eslint-config-prettier@9.0.0(eslint@8.39.0))(eslint@8.39.0)(typescript@5.0.4):
+  eslint-plugin-harmony@7.1.2(@typescript-eslint/eslint-plugin@5.59.1(@typescript-eslint/parser@5.59.1(eslint@8.39.0)(typescript@5.0.4))(eslint@8.39.0)(typescript@5.0.4))(eslint-config-prettier@10.0.1(eslint@8.39.0))(eslint@8.39.0)(typescript@5.0.4):
     dependencies:
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/eslint-plugin': 5.59.1(@typescript-eslint/parser@5.59.1(eslint@8.39.0)(typescript@5.0.4))(eslint@8.39.0)(typescript@5.0.4)
@@ -5039,7 +5040,7 @@ snapshots:
       '@typescript-eslint/parser': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       eslint: 8.39.0
     optionalDependencies:
-      eslint-config-prettier: 9.0.0(eslint@8.39.0)
+      eslint-config-prettier: 10.0.1(eslint@8.39.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
