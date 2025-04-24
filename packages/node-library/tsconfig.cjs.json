@@ -1,14 +1,9 @@
 {
-  "extends": [
-    "./tsconfig.base.json",
-    "@repobuddy/typescript/tsconfig/modules/buddy-commonjs.json"
-  ],
+  "extends": ["./tsconfig.base.json", "@repobuddy/typescript/tsconfig/modules/buddy-commonjs.json"],
   "compilerOptions": {
     "outDir": "cjs"
   },
   // excluding test files as they might contain platform specific code,
   // such as `import.meta`
-  "exclude": [
-    "**/*.{spec,unit,test,accept,integrate,system,pref,stress}.*"
-  ]
+  "exclude": ["**/*.{spec,unit,test,accept,integrate,system,pref,stress}.*"]
 }

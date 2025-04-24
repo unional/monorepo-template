@@ -17,7 +17,7 @@ export default [
 	tsEslint.configs.eslintRecommended,
 	{
 		plugins: {
-			formatjs
+			formatjs,
 		},
 		rules: {
 			'formatjs/enforce-description': ['error', 'literal'],
@@ -25,11 +25,11 @@ export default [
 			'formatjs/enforce-id': [
 				'error',
 				{
-					idInterpolationPattern: '[sha512:contenthash:base64:6]'
-				}
+					idInterpolationPattern: '[sha512:contenthash:base64:6]',
+				},
 			],
 			'formatjs/no-multiple-whitespaces': 'error',
-			'formatjs/no-multiple-plurals': 'error'
-		}
-	}
+			'formatjs/no-multiple-plurals': 'error',
+		},
+	},
 ]

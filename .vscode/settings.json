@@ -2,13 +2,17 @@
   "cSpell.words": [
     "depcheckrc",
     "formatjs",
+    "jscoverage",
     "pinst",
     "pnpm",
     "repobuddy",
     "Snyk",
     "tsbuddy",
     "tsbuildinfo",
-    "turborepo"
+    "turborepo",
+    "vite",
+    "vitest",
+    "wscript"
   ],
   "editor.indentSize": "tabSize",
   "editor.tabSize": 2,
@@ -16,9 +20,7 @@
   "files.trimTrailingWhitespace": true,
   "json.schemas": [
     {
-      "fileMatch": [
-        "tsconfig.*.json"
-      ],
+      "fileMatch": ["tsconfig.*.json"],
       "url": "http://json.schemastore.org/tsconfig"
     }
   ],

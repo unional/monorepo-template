@@ -32,7 +32,6 @@ build/Release
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # Optional npm cache directory
 .npm
@@ -68,3 +67,9 @@ common/autoinstallers/*/.npmrc
 .turbo
 
 # project specific
+cjs
+dist
+esm
+tslib
+vite.config.*.timestamp*
+vitest.config.*.timestamp*
