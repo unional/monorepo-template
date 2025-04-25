@@ -5,5 +5,16 @@
   },
   // excluding test files as they might contain platform specific code,
   // such as `import.meta`
-  "exclude": ["**/*.{spec,unit,test,accept,integrate,system,pref,stress}.*"]
+  "exclude": [
+    "**/*.accept.*",
+    "**/*.integrate.*",
+    "**/*.learning.*",
+    "**/*.pref.*",
+    "**/*.spec.*",
+    "**/*.stress.*",
+    "**/*.study.*",
+    "**/*.system.*",
+    "**/*.test.*",
+    "**/*.unit.*"
+  ]
 }

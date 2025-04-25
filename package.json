@@ -8,42 +8,41 @@
 		"cs": "changeset",
 		"depcheck": "turbo run depcheck",
 		"lint": "run-p lint:*",
-		"lint:repos": "turbo run lint",
-		"lint:eslint": "cross-env TIMING=1 eslint --max-warnings 0",
 		"lint:biome": "biome check",
+		"lint:eslint": "cross-env TIMING=1 eslint --max-warnings 0",
+		"lint:repos": "turbo run lint",
 		"nl": "pnpm --filter=./packages/node-library",
-		"nuke:root": "rimraf node_modules",
 		"nuke": "turbo run nuke && pnpm nuke:root",
+		"nuke:root": "rimraf node_modules",
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable",
 		"prepare": "husky install",
 		"release": "changeset publish",
 		"size": "turbo run size",
 		"test": "turbo run test",
-		"verify:repos": "turbo run lint build coverage depcheck size",
 		"verify": "run-p lint verify:repos",
+		"verify:repos": "turbo run lint build coverage depcheck size",
 		"version": "changeset version"
 	},
-	"devDependencies": {
+	"dependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@changesets/cli": "^2.29.2",
 		"@commitlint/cli": "^19.8.0",
 		"@commitlint/config-conventional": "^19.8.0",
+		"@eslint/compat": "^1.2.8",
 		"@repobuddy/biome": "^1.7.1",
 		"cross-env": "^7.0.3",
 		"eslint": "^9.25.1",
 		"eslint-plugin-formatjs": "^5.3.1",
+		"globals": "^16.0.0",
 		"husky": "^9.1.7",
 		"npm-run-all2": "^7.0.2",
 		"pinst": "^3.0.0",
 		"rimraf": "~6.0.1",
 		"turbo": "2.5.1",
-		"typescript": "^5.8.3"
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.31.0",
+		"vitest": "^3.1.2"
 	},
-	"packageManager": "pnpm@10.9.0",
-	"dependencies": {
-		"@eslint/compat": "^1.2.8",
-		"globals": "^16.0.0",
-		"typescript-eslint": "^8.31.0"
-	}
+	"packageManager": "pnpm@10.9.0"
 }
