@@ -24,8 +24,8 @@ importers:
         specifier: ^1.2.8
         version: 1.2.8(eslint@9.25.1(jiti@2.4.2))
       '@repobuddy/biome':
-        specifier: ^1.7.1
-        version: 1.7.1(@biomejs/biome@1.9.4)
+        specifier: ^2.0.0
+        version: 2.3.0(@biomejs/biome@1.9.4)
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -827,10 +827,10 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@repobuddy/biome@1.7.1':
-    resolution: {integrity: sha512-2G5MpFkzXo6Y0P0ijsvAzYWpagO06WnQInekX8hKYhzusXKGuJfqqIbXs6JdBM4FJk9Uj50Ho3ui7ck+fI8trg==}
+  '@repobuddy/biome@2.3.0':
+    resolution: {integrity: sha512-65j1Akn8HLanSho/fM0WeUTkZr0/YJtFeKOMc73LnnLLk1pKIpWx88tiQSDBH1okas2g2uR2FyYfZBuO5Y3q3g==}
     peerDependencies:
-      '@biomejs/biome': '>= 1.8.0'
+      '@biomejs/biome': '>= 2'
 
   '@repobuddy/typescript@2.1.0':
     resolution: {integrity: sha512-b9owazWwMPs357qqti4CrIt7+isqcPbsUOZmW+Yc0L7OVz2YmrHhCgg2ggFGQgSFhhMWc/mQQ18K8VVR5KxPBQ==}
@@ -4296,7 +4296,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@repobuddy/biome@1.7.1(@biomejs/biome@1.9.4)':
+  '@repobuddy/biome@2.3.0(@biomejs/biome@1.9.4)':
     dependencies:
       '@biomejs/biome': 1.9.4
 
