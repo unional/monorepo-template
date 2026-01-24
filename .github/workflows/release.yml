@@ -2,22 +2,29 @@ name: release
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
+      - releases/*
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   code:
     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
     with:
-      node-version: '[16, 18]'
-      pnpm-version: 8.3.1
+      node-version: '[20, 22, 24]'
 
   release:
     uses: unional/.github/.github/workflows/pnpm-release-changeset.yml@main
     needs: code
     secrets: inherit
-    with:
-      pnpm-version: 8.3.1
 
-  # docgen:
-  #     uses: unional/.github/.github/workflows/pnpm-docs.yml@main
-  #     needs: release
+  docgen:
+    permissions:
+      contents: write
+    uses: unional/.github/.github/workflows/pnpm-docs.yml@main
+    needs: release
+    if: github.ref == 'refs/heads/main' && needs.release.outputs.published == 'true'
+    with:
+      publish-dir: ./apps/page/storybook-static

@@ -3,7 +3,6 @@ import formatjs from 'eslint-plugin-formatjs'
 import globals from 'globals'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import tsEslint from 'typescript-eslint'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -13,8 +12,6 @@ const gitignorePath = path.resolve(__dirname, '.gitignore')
 export default [
 	includeIgnoreFile(gitignorePath),
 	{ languageOptions: { globals: globals.browser } },
-	tsEslint.configs.base,
-	tsEslint.configs.eslintRecommended,
 	{
 		plugins: {
 			formatjs,
