@@ -11,7 +11,6 @@
 		"knip": "knip",
 		"fix": "biome check --write",
 		"lint:eslint": "cross-env TIMING=1 eslint --max-warnings 0",
-		"lint:p": "turbo run lint",
 		"nl": "pnpm --filter=./packages/node-library",
 		"nuke": "turbo run nuke && pnpm nuke:root",
 		"nuke:root": "rimraf node_modules",

@@ -9,14 +9,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": [
-			"!**/node_modules/",
-			"!**/.vscode/**/*.txt",
-			"!**/.dist",
-			"!**/esm",
-			"!**/*.code-workspace",
-			"!**/tailwind.css"
-		]
+		"includes": ["!**/node_modules/", "!**/.vscode/**/*.txt", "!**/dist", "!**/*.code-workspace", "!**/tailwind.css"]
 	},
 	"formatter": {
 		"enabled": true,
