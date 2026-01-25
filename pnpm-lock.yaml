@@ -51,8 +51,8 @@ importers:
         specifier: ^1.58.0
         version: 1.58.0
       rimraf:
-        specifier: ~6.0.1
-        version: 6.0.1
+        specifier: ~6.1.0
+        version: 6.1.2
       turbo:
         specifier: ^2.5.1
         version: 2.5.1
@@ -120,8 +120,8 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(react@19.2.3)
       rimraf:
-        specifier: ~6.0.1
-        version: 6.0.1
+        specifier: ~6.1.0
+        version: 6.1.2
       size-limit:
         specifier: ~11.2.0
         version: 11.2.0
@@ -2443,15 +2443,14 @@ packages:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
     hasBin: true
 
-  glob@11.0.0:
-    resolution: {integrity: sha512-9UiX/Bl6J2yaBbxKoEBRm4Cipxgok8kQYcOPEhScPwebu2I0HoQOuYdIO6S3hLuWoZgpDpwQZMzTFxgpkyT76g==}
-    engines: {node: 20 || >=22}
-    hasBin: true
-
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
     hasBin: true
+
+  glob@13.0.0:
+    resolution: {integrity: sha512-tvZgpqk6fz4BaNZ66ZsRaZnbHvP/jG3uKJvAZOwEVUL4RTA5nJeeLYfyN9/VA8NX/V3IBG+hkeuGpKjvELkVhA==}
+    engines: {node: 20 || >=22}
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -2697,10 +2696,6 @@ packages:
 
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
-
-  jackspeak@4.0.1:
-    resolution: {integrity: sha512-cub8rahkh0Q/bw1+GxP7aeSe29hHHn2V4m29nnDlvCdlgU+3UGxkZp7Z53jLUdpX3jdTO0nJZUDl3xvbWc2Xog==}
-    engines: {node: 20 || >=22}
 
   jackspeak@4.1.1:
     resolution: {integrity: sha512-zptv57P3GpL+O0I7VdMJNBZCu+BPHVQUk55Ft8/QCJjTVxrnJHuVuX/0Bl2A6/+2oyR/ZMEuFKwmzqqZ/U5nPQ==}
@@ -3056,10 +3051,6 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  minimatch@10.0.1:
-    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
-    engines: {node: 20 || >=22}
-
   minimatch@10.1.1:
     resolution: {integrity: sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==}
     engines: {node: 20 || >=22}
@@ -3217,6 +3208,9 @@ packages:
 
   package-json-from-dist@1.0.0:
     resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
+
+  package-json-from-dist@1.0.1:
+    resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
   package-manager-detector@0.2.11:
     resolution: {integrity: sha512-BEnLolu+yuz22S56CU1SUKq3XC3PkwD5wv4ikR4MfGvnRVcmzXR9DwSlW2fEamyTPyXHomBJRzgapeuBvRNzJQ==}
@@ -3470,8 +3464,8 @@ packages:
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rimraf@6.0.1:
-    resolution: {integrity: sha512-9dkvaxAsk/xNXSJzMgFqqMCuFgt2+KsOFek3TMLfo8NCPfWpBmqwyNn5Y+NX56QUYfCtsyhF3ayiboEoUmJk/A==}
+  rimraf@6.1.2:
+    resolution: {integrity: sha512-cFCkPslJv7BAXJsYlK1dZsbP8/ZNLkCAQ0bi1hf5EKX2QHegmDFEFA6QhuYJlk7UDdc+02JjO80YSOrWPpw06g==}
     engines: {node: 20 || >=22}
     hasBin: true
 
@@ -6870,15 +6864,6 @@ snapshots:
       package-json-from-dist: 1.0.0
       path-scurry: 1.11.1
 
-  glob@11.0.0:
-    dependencies:
-      foreground-child: 3.1.1
-      jackspeak: 4.0.1
-      minimatch: 10.0.1
-      minipass: 7.1.2
-      package-json-from-dist: 1.0.0
-      path-scurry: 2.0.0
-
   glob@11.1.0:
     dependencies:
       foreground-child: 3.3.1
@@ -6886,6 +6871,12 @@ snapshots:
       minimatch: 10.1.1
       minipass: 7.1.2
       package-json-from-dist: 1.0.0
+      path-scurry: 2.0.0
+
+  glob@13.0.0:
+    dependencies:
+      minimatch: 10.1.1
+      minipass: 7.1.2
       path-scurry: 2.0.0
 
   glob@7.2.3:
@@ -7106,12 +7097,6 @@ snapshots:
     optional: true
 
   jackspeak@3.4.3:
-    dependencies:
-      '@isaacs/cliui': 8.0.2
-    optionalDependencies:
-      '@pkgjs/parseargs': 0.11.0
-
-  jackspeak@4.0.1:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
@@ -7653,10 +7638,6 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  minimatch@10.0.1:
-    dependencies:
-      brace-expansion: 2.0.1
-
   minimatch@10.1.1:
     dependencies:
       '@isaacs/brace-expansion': 5.0.0
@@ -7824,6 +7805,8 @@ snapshots:
   p-try@2.2.0: {}
 
   package-json-from-dist@1.0.0: {}
+
+  package-json-from-dist@1.0.1: {}
 
   package-manager-detector@0.2.11:
     dependencies:
@@ -8051,10 +8034,10 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rimraf@6.0.1:
+  rimraf@6.1.2:
     dependencies:
-      glob: 11.0.0
-      package-json-from-dist: 1.0.0
+      glob: 13.0.0
+      package-json-from-dist: 1.0.1
 
   rolldown-plugin-dts@0.21.6(oxc-resolver@11.16.4)(rolldown@1.0.0-rc.1)(typescript@5.8.3):
     dependencies:
