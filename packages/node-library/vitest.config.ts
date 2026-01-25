@@ -5,6 +5,6 @@ export default defineConfig({
 		coverage: {
 			include: ['src/**/*.{ts,tsx}'],
 		},
-		workspace: ['vitest.config.node.ts', 'vitest.config.storybook.ts'],
+		projects: ['vitest.config.node.ts', 'vitest.config.storybook.ts'],
 	},
 })
