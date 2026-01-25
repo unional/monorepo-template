@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { browserTestPreset } from '@repobuddy/vitest/config'
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin'
 import { playwright } from '@vitest/browser-playwright'
 import { defineProject } from 'vitest/config'
@@ -14,6 +15,7 @@ export default defineProject({
 		storybookTest({
 			configDir: path.join(dirname, '.storybook'),
 		}),
+		browserTestPreset(),
 	],
 	test: {
 		name: 'storybook',

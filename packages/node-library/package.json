@@ -51,6 +51,7 @@
 	},
 	"devDependencies": {
 		"@repobuddy/typescript": "^2.1.0",
+		"@repobuddy/vitest": "^2.1.1",
 		"@size-limit/preset-small-lib": "~12.0.0",
 		"@storybook/addon-a11y": "^10.2.0",
 		"@storybook/addon-docs": "^10.2.0",
