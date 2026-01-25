@@ -1,3 +1,11 @@
 {
-  "extends": "./tsconfig.esm.json"
+	"extends": "@repobuddy/typescript/tsconfig/monorepo.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"module": "preserve",
+		"moduleResolution": "bundler",
+		"outDir": ".nowhere",
+		"rewriteRelativeImportExtensions": true,
+		"verbatimModuleSyntax": true
+	}
 }

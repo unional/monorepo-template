@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "yzhang.markdown-all-in-one",
     "davidanson.vscode-markdownlint",
-    "biomejs.biome"
+    "biomejs.biome",
+    "unifiedjs.vscode-mdx"
   ]
 }

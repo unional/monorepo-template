@@ -1,0 +1,23 @@
+{
+	"name": "page",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"license": "ISC",
+	"author": "",
+	"main": "index.js",
+	"scripts": {
+		"sb": "storybook dev -p 6006",
+		"sb:build": "storybook build"
+	},
+	"devDependencies": {
+		"@storybook/addon-a11y": "^10.2.0",
+		"@storybook/addon-docs": "^10.2.0",
+		"@storybook/addon-vitest": "^10.2.0",
+		"@storybook/react-vite": "^10.2.0",
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3",
+		"storybook": "^10.2.0"
+	},
+	"packageManager": "pnpm@10.28.1"
+}

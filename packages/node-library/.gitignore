@@ -46,3 +46,6 @@ cjs/
 esm/
 tslib/
 *.tsbuildinfo
+
+*storybook.log
+storybook-static

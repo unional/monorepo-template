@@ -1,7 +1,7 @@
 {
 	"name": "node-library",
-	"private": true,
 	"version": "0.0.0",
+	"private": true,
 	"description": "Your awesome node library",
 	"keywords": [],
 	"homepage": "https://github.com/unional/monorepo-template",
@@ -21,55 +21,53 @@
 	},
 	"sideEffects": false,
 	"type": "module",
+	"imports": {
+		"#node-library": "./src/index.ts"
+	},
 	"exports": {
 		".": {
-			"import": {
-				"types": "./esm/index.d.ts",
-				"default": "./esm/index.js"
-			},
-			"require": {
-				"types": "./cjs/index.d.ts",
-				"default": "./cjs/index.js"
-			}
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
 		}
 	},
-	"main": "./cjs/index.js",
-	"module": "./esm/index.js",
-	"types": "./cjs/index.d.ts",
 	"files": [
-		"cjs",
-		"esm",
+		"dist",
 		"src",
 		"!**/*.{spec,unit,test,accept,integrate,system,pref,stress}.*"
 	],
 	"scripts": {
-		"build": "run-p build:*",
-		"build:cjs": "buddy ts build cjs",
-		"build:esm": "tsc -p tsconfig.esm.json",
-		"build:tslib": "buddy ts build tslib",
-		"clean": "rimraf cjs esm coverage lib --glob *.tsbuildinfo",
+		"build": "tsdown",
+		"clean": "rimraf dist cjs esm coverage lib --glob *.tsbuildinfo",
 		"coverage": "vitest run --coverage",
 		"depcheck": "depcheck",
-		"lint": "cross-env TIMING=1 eslint --max-warnings 0",
 		"nuke": "rimraf node_modules",
 		"size": "size-limit",
+		"sb": "storybook dev -p 6006",
+		"sb:build": "storybook build",
 		"test": "vitest run",
+		"v": "npm-run-all -p build lint coverage depcheck -p size",
 		"w": "run-p w:build w:test",
-		"w:test": "vitest",
 		"w:build": "tsc -w",
-		"verify": "npm-run-all -p build lint coverage depcheck -p size"
+		"w:test": "vitest"
 	},
 	"devDependencies": {
 		"@repobuddy/typescript": "^2.1.0",
 		"@size-limit/preset-small-lib": "~11.2.0",
+		"@storybook/addon-a11y": "^10.2.0",
+		"@storybook/addon-docs": "^10.2.0",
+		"@storybook/addon-vitest": "^10.2.0",
+		"@storybook/react-vite": "^10.2.0",
+		"@vitest/browser": "3.1.2",
 		"@vitest/coverage-v8": "^3.1.2",
 		"cross-env": "^7.0.3",
 		"depcheck": "~1.4.7",
 		"npm-run-all2": "^7.0.2",
-		"repobuddy": "^1.2.0",
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3",
 		"rimraf": "~6.0.1",
 		"size-limit": "~11.2.0",
-		"tslib": "^2.8.1",
+		"storybook": "^10.2.0",
+		"tsdown": "^0.20.1",
 		"typescript": "^5.8.3",
 		"vitest": "^3.1.2"
 	}

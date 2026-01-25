@@ -2,22 +2,22 @@
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"extends": ["@repobuddy/biome/recommended"],
 	"files": {
-		"ignore": [
-			".turbo",
-			"cjs",
-			"coverage",
-			"dist",
-			"esm",
-			"node_modules",
-			"tslib",
-			"*/*/vite.config.*.timestamp*",
-			"*/*/vitest.config.*.timestamp*"
+		"includes": [
+			"!.turbo",
+			"!cjs",
+			"!coverage",
+			"!dist",
+			"!esm",
+			"!node_modules",
+			"!tslib",
+			"!*/*/vite.config.*.timestamp*",
+			"!*/*/vitest.config.*.timestamp*"
 		]
 	},
 	"overrides": [
 		{
 			// Disable rules that are not applicable to storybook files
-			"include": ["*.stories.tsx"],
+			"includes": ["*.stories.tsx"],
 			"linter": {
 				"rules": {
 					"a11y": {
@@ -33,7 +33,7 @@
 			}
 		},
 		{
-			"include": [".vscode/*.json", "tsconfig.*"],
+			"includes": [".vscode/*.json", "tsconfig.*"],
 			"json": {
 				"formatter": {
 					"indentStyle": "space"
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"include": ["package.json"],
+			"includes": ["package.json"],
 			"formatter": {
 				"indentStyle": "tab",
 				"lineWidth": 20
