@@ -53,5 +53,8 @@
 	"tsimporter.emitSemicolon": false,
 	"typescript.format.semicolons": "remove",
 	"typescript.preferences.quoteStyle": "single",
-	"typescript.tsdk": "node_modules/typescript/lib"
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"yaml.schemas": {
+		"https://json.schemastore.org/pnpm-workspace": "pnpm-workspace.yaml"
+	}
 }
