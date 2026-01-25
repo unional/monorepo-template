@@ -1,9 +1,0 @@
-ignores:
-  - '@repobuddy/jest'          # depcheck unable to detect jest presets
-  - '@repobuddy/typescript'    # depcheck unable to detect TypeScript extends
-  - '@size-limit/*'            # depcheck unable to recognize size-limit
-  - '@vitest/coverage-v8'
-  - eslint-*                   # eslint packages are installed at top level to avoid conflicts
-  - rimraf                     # https://github.com/depcheck/depcheck/issues/776
-  - size-limit                 # depcheck unable to recognize size-limit
-  - tslib                      # depcheck doesn't recognize tslib.
