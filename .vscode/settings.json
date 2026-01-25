@@ -1,57 +1,57 @@
 {
-  "[javascript]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  "[typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "biomejs.biome",
-    "editor.formatOnSave": true
-  },
-  "cSpell.words": [
-    "depcheckrc",
-    "formatjs",
-    "jscoverage",
-    "pinst",
-    "pnpm",
-    "repobuddy",
-    "Snyk",
-    "tsbuddy",
-    "tsbuildinfo",
-    "turborepo",
-    "vite",
-    "vitest",
-    "wscript"
-  ],
-  "editor.indentSize": "tabSize",
-  "editor.tabSize": 2,
-  "eslint.enable": true,
-  "files.trimTrailingWhitespace": true,
-  "json.schemas": [
-    {
-      "fileMatch": ["tsconfig.*.json"],
-      "url": "http://json.schemastore.org/tsconfig"
-    }
-  ],
-  "prettier.useTabs": true,
-  "tsimporter.emitSemicolon": false,
-  "typescript.format.semicolons": "remove",
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.tsdk": "node_modules/typescript/lib"
+	"[javascript]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit"
+		},
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	},
+	"[typescript]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit"
+		},
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"cSpell.words": [
+		"depcheckrc",
+		"formatjs",
+		"jscoverage",
+		"pinst",
+		"pnpm",
+		"repobuddy",
+		"Snyk",
+		"tsbuddy",
+		"tsbuildinfo",
+		"turborepo",
+		"vite",
+		"vitest",
+		"wscript"
+	],
+	"editor.indentSize": "tabSize",
+	"editor.tabSize": 2,
+	"eslint.enable": true,
+	"files.trimTrailingWhitespace": true,
+	"json.schemas": [
+		{
+			"fileMatch": ["tsconfig.*.json"],
+			"url": "http://json.schemastore.org/tsconfig"
+		}
+	],
+	"prettier.useTabs": true,
+	"tsimporter.emitSemicolon": false,
+	"typescript.format.semicolons": "remove",
+	"typescript.preferences.quoteStyle": "single",
+	"typescript.tsdk": "node_modules/typescript/lib"
 }

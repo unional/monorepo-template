@@ -1,54 +1,43 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 	"extends": ["@repobuddy/biome/recommended"],
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
 	"files": {
+		"ignoreUnknown": false,
 		"includes": [
-			"!.turbo",
-			"!cjs",
-			"!coverage",
-			"!dist",
-			"!esm",
-			"!node_modules",
-			"!tslib",
-			"!*/*/vite.config.*.timestamp*",
-			"!*/*/vitest.config.*.timestamp*"
+			"!**/node_modules/",
+			"!**/.vscode/**/*.txt",
+			"!**/.dist",
+			"!**/esm",
+			"!**/*.code-workspace",
+			"!**/tailwind.css"
 		]
 	},
-	"overrides": [
-		{
-			// Disable rules that are not applicable to storybook files
-			"includes": ["*.stories.tsx"],
-			"linter": {
-				"rules": {
-					"a11y": {
-						"useButtonType": "off",
-						"useValidAnchor": "off"
-					},
-					"correctness": {
-						// No need to ensure access to items by key in story
-						// @see: https://react.dev/learn/rendering-lists#why-does-react-need-keys
-						"useJsxKeyInIterable": "off"
-					}
-				}
-			}
-		},
-		{
-			"includes": [".vscode/*.json", "tsconfig.*"],
-			"json": {
-				"formatter": {
-					"indentStyle": "space"
-				},
-				"parser": {
-					"allowComments": true
-				}
-			}
-		},
-		{
-			"includes": ["package.json"],
-			"formatter": {
-				"indentStyle": "tab",
-				"lineWidth": 20
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"rules": {
+			"a11y": {
+				"noSvgWithoutTitle": "off",
+				"useAltText": "off",
+				"useSemanticElements": "off"
+			},
+			"correctness": {
+				"useImportExtensions": "error"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "off"
 			}
 		}
-	]
+	},
+	"javascript": {
+		"jsxRuntime": "reactClassic"
+	}
 }
