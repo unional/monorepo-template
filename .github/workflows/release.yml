@@ -13,7 +13,7 @@ jobs:
   code:
     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
     with:
-      node-version: '[20, 22, 24]'
+      os: ubuntu-latest
 
   release:
     uses: unional/.github/.github/workflows/pnpm-release-changeset.yml@main
