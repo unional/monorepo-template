@@ -14,6 +14,7 @@
 		"nl": "pnpm --filter=./packages/node-library",
 		"nuke": "turbo run nuke && pnpm nuke:root",
 		"nuke:root": "rimraf node_modules",
+		"prepare": "husky",
 		"release": "changeset publish",
 		"size": "turbo run size",
 		"test": "turbo run test",
