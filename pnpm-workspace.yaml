@@ -3,7 +3,54 @@ packages:
   - packages/*
   - tools/*
 
+allowBuilds:
+  esbuild: true
+
 minimumReleaseAge: 14400 # 10 days
 minimumReleaseAgeExclude:
   # Renovate security update: storybook@10.2.10
   - storybook@10.2.10
+  # New package versions needed for lockfile sync (package.json requirements)
+  - "@biomejs/biome@2.4.15"
+  - "@biomejs/cli-win32-x64@2.4.15"
+  - "@biomejs/cli-win32-arm64@2.4.15"
+  - "@biomejs/cli-darwin-x64@2.4.15"
+  - "@biomejs/cli-darwin-arm64@2.4.15"
+  - "@biomejs/cli-linux-x64@2.4.15"
+  - "@biomejs/cli-linux-arm64@2.4.15"
+  - "@biomejs/cli-linux-x64-musl@2.4.15"
+  - "@biomejs/cli-linux-arm64-musl@2.4.15"
+  - "@commitlint/cli@21.0.0"
+  - "@commitlint/cli@21.0.1"
+  - "@commitlint/config-conventional@21.0.0"
+  - "@commitlint/config-conventional@21.0.1"
+  - "@commitlint/format@21.0.0"
+  - "@commitlint/format@21.0.1"
+  - "@commitlint/lint@21.0.0"
+  - "@commitlint/lint@21.0.1"
+  - "@commitlint/load@21.0.0"
+  - "@commitlint/load@21.0.1"
+  - "@commitlint/read@21.0.0"
+  - "@commitlint/read@21.0.1"
+  - "@commitlint/types@21.0.0"
+  - "@commitlint/types@21.0.1"
+  - "@commitlint/execute-rule@21.0.0"
+  - "@commitlint/execute-rule@21.0.1"
+  - "@commitlint/resolve-extends@21.0.0"
+  - "@commitlint/resolve-extends@21.0.1"
+  - "@commitlint/config-validator@21.0.0"
+  - "@commitlint/config-validator@21.0.1"
+  - "@commitlint/parse@21.0.0"
+  - "@commitlint/parse@21.0.1"
+  - "@commitlint/rules@21.0.0"
+  - "@commitlint/rules@21.0.1"
+  - "@commitlint/is-ignored@21.0.0"
+  - "@commitlint/is-ignored@21.0.1"
+  - "@commitlint/top-level@21.0.0"
+  - "@commitlint/top-level@21.0.1"
+  - "@commitlint/ensure@21.0.0"
+  - "@commitlint/ensure@21.0.1"
+  - "@commitlint/message@21.0.0"
+  - "@commitlint/message@21.0.1"
+  - "@commitlint/to-lines@21.0.0"
+  - "@commitlint/to-lines@21.0.1"
