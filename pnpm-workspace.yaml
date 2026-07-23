@@ -9,3 +9,5 @@ minimumReleaseAgeExclude:
   - storybook@10.2.10
   # Renovate security update: turbo@2.9.14
   - turbo@2.9.14
+  # Renovate security update: @vitest/browser@4.1.10
+  - "@vitest/browser@4.1.10"
