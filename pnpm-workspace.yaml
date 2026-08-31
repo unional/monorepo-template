@@ -3,6 +3,13 @@ packages:
   - packages/*
   - tools/*
 
+# pnpm 11 blocks dependency postinstall scripts by default and turns an un-decided one
+# into a non-zero exit (ERR_PNPM_IGNORED_BUILDS), so every native-binary installer must
+# be listed here explicitly. This is a MAP, not a list — written as a YAML sequence pnpm
+# silently rewrites it into a half-broken hybrid.
+allowBuilds:
+  esbuild: true
+
 minimumReleaseAge: 14400 # 10 days
 minimumReleaseAgeExclude:
   # Renovate security update: storybook@10.2.10

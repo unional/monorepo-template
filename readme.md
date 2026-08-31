@@ -9,27 +9,28 @@ Clone or create from this template,
 and remove the packages you don't need,
 and then run `pnpm install` to update the lock file.
 
-This template uses GitHub workflows from [unional/.github](https://github.com/unional/.github).
+## Release pipeline
+
+This template uses the shared GitHub workflows from [cyberuni/.github](https://github.com/cyberuni/.github).
 They are flexible workflows that can be used for any repo.
 
-They assume you have two GitHub Actions secrets:
+They need **no repository secrets**:
 
-- CI_GITHUB_TOKEN: a token with commit access to the repo
-- NPM_TOKEN: a token with publish access to npm
+- the release publishes through [npm trusted publishing](https://docs.npmjs.com/trusted-publishers)
+  (OIDC), which also emits SLSA provenance, so there is no `NPM_TOKEN`
+- versioning, tags and the "version packages" pull request go through the built-in
+  `GITHUB_TOKEN` with the `permissions:` block declared in `.github/workflows/release.yml`,
+  so there is no `CI_GITHUB_TOKEN` personal access token
 
-They are used during release so that CHANGELOGs and git tags can be updated.
+Each package you publish from a repo made with this template needs a trusted publisher
+registered at `npmjs.com/package/<name>/access`, naming the repo and the **caller**
+workflow's filename (`release.yml`).
 
 ## [node-library](packages/node-library)
 
-[![NPM version][npm-node-lib-image]][npm-node-lib-url]
-[![NPM downloads][downloads-node-lib-image]][npm-node-lib-url]
-
 > This is an awesome dual-package node library.
 
-[downloads-node-lib-image]: https://img.shields.io/npm/dm/unional/node-library.svg?style=flat
-[github-action-url]: https://github.com/unional/monorepo-template/actions/workflows/release.yml
-[github-release]: https://github.com/unional/monorepo-template/actions/workflows/release.yml/badge.svg
-[npm-node-lib-image]: https://img.shields.io/npm/v/unional/node-library.svg?style=flat
-[npm-node-lib-url]: https://npmjs.org/package/unional/node-library
+[github-action-url]: https://github.com/cyberuni/monorepo-template/actions/workflows/release.yml
+[github-release]: https://github.com/cyberuni/monorepo-template/actions/workflows/release.yml/badge.svg
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/

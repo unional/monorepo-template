@@ -4,13 +4,13 @@
 	"private": true,
 	"description": "Your awesome node library",
 	"keywords": [],
-	"homepage": "https://github.com/unional/monorepo-template",
+	"homepage": "https://github.com/cyberuni/monorepo-template",
 	"bugs": {
-		"url": "https://github.com/unional/monorepo-template/issues"
+		"url": "https://github.com/cyberuni/monorepo-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/unional/monorepo-template.git",
+		"url": "https://github.com/cyberuni/monorepo-template.git",
 		"directory": "packages/node-library"
 	},
 	"license": "MIT",
@@ -66,7 +66,7 @@
 		"rimraf": "~6.1.0",
 		"size-limit": "~13.0.0",
 		"storybook": "^10.2.0",
-		"tsdown": "^0.22.0",
+		"tsdown": "^0.22.14",
 		"typescript": "^7.0.0",
 		"vitest": "^4.1.0"
 	}

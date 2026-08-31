@@ -3,9 +3,21 @@ on:
   workflow_dispatch:
   pull_request:
     types: [opened, synchronize]
+  merge_group:
 
 jobs:
   code:
-    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    # cyberuni, not unional: a repo in the org must not reach back into a personal
+    # namespace for its CI, which is the single point of failure the org move removes.
+    #
+    # `os` is a JSON *string* the workflow feeds to `fromJson`. Passing a bare
+    # `ubuntu-latest` is not valid JSON, so the matrix fails to expand, `verify` never
+    # runs, and `all-checks` reports failure with no legs to read. That is exactly what
+    # was happening on `main` here.
+    #
+    # `skip-playwright` is deliberately left at its `false` default: this repo runs real
+    # browser tests (vitest browser mode driving chromium through
+    # `packages/node-library/vitest.storybook.config.ts`).
+    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@main
     with:
-      os: ubuntu-latest
+      os: '["ubuntu-latest"]'
