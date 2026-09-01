@@ -3,8 +3,12 @@
 	"tasks": {
 		"build": {
 			"dependsOn": ["^build"],
-			"inputs": ["*.ts", "package.json", "tsconfig*json"],
-			"outputs": ["dist", "*.tsbuildinfo"]
+			// No `inputs` override. It used to read `["*.ts", "package.json",
+			// "tsconfig*json"]`, and those globs are package-root relative and do not
+			// recurse — so `src/**` was NOT an input and turbo served a stale cached
+			// build after every source edit. The default (every non-ignored file in the
+			// package) is the correct hash here.
+			"outputs": ["dist/**", "*.tsbuildinfo"]
 		},
 		"clean": {
 			"cache": false
@@ -23,6 +27,9 @@
 			"dependsOn": ["build"]
 		},
 		"test": {
+			"dependsOn": ["^build"]
+		},
+		"typecheck": {
 			"dependsOn": ["^build"]
 		}
 	}

@@ -1,0 +1,9 @@
+# The local toolchain, pinned. `mise install` gets you the exact node and pnpm this
+# repo is developed and released against.
+#
+# CI does NOT read this file: the shared `pnpm-verify.yml` drives its own matrix
+# (`lts/-1`, `lts/*`) so a repo is tested on more than one node. Keep `pnpm` here in
+# step with `packageManager` in package.json — corepack reads that one.
+[tools]
+node = "24.20.0"
+pnpm = "11.24.0"

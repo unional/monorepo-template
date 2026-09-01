@@ -36,8 +36,10 @@ jobs:
         uses: dependabot/fetch-metadata@v3
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
+      # `--merge`, not `--rebase`: the repo baseline allows merge commits only, so a
+      # `--rebase` arming can never execute and the job silently does nothing.
       - name: Enable auto-merge for Dependabot PRs
-        run: gh pr merge --auto --rebase "$PR_URL"
+        run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
