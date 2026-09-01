@@ -8,7 +8,7 @@ on:
 
 jobs:
   code:
-    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@main
+    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@v2
     with:
       os: '["ubuntu-latest"]'
 
@@ -17,7 +17,7 @@ jobs:
   # pushes that only open or update the Version PR rather than publish — deliberate, it
   # fails closed.
   publish-gate:
-    uses: cyberuni/.github/.github/workflows/pnpm-publish-gate.yml@main
+    uses: cyberuni/.github/.github/workflows/pnpm-publish-gate.yml@v2
     permissions:
       contents: read
 
@@ -25,7 +25,7 @@ jobs:
   # publishing (OIDC) and the version PR through the built-in GITHUB_TOKEN, so the
   # permissions are declared here explicitly rather than inherited.
   release:
-    uses: cyberuni/.github/.github/workflows/pnpm-release-changeset-oidc.yml@main
+    uses: cyberuni/.github/.github/workflows/pnpm-release-changeset-oidc.yml@v2
     needs: [code, publish-gate]
     permissions:
       id-token: write
@@ -33,7 +33,7 @@ jobs:
       pull-requests: write
 
   docgen:
-    uses: cyberuni/.github/.github/workflows/pnpm-docs.yml@main
+    uses: cyberuni/.github/.github/workflows/pnpm-docs.yml@v2
     needs: release
     if: github.ref == 'refs/heads/main' && needs.release.outputs.published == 'true'
     permissions:
