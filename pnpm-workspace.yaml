@@ -1,7 +1,6 @@
 packages:
   - apps/*
   - packages/*
-  - tools/*
 
 # pnpm 11 blocks dependency postinstall scripts by default and turns an un-decided one
 # into a non-zero exit (ERR_PNPM_IGNORED_BUILDS), so every native-binary installer must
@@ -10,11 +9,12 @@ packages:
 allowBuilds:
   esbuild: true
 
+# A newly published version is not installable until it has been on the registry for
+# 10 days. This is a supply-chain control: it is what stops a compromised release from
+# being pulled into a build within hours of publication.
+#
+# There is deliberately NO `minimumReleaseAgeExclude` list here. Adding one is how the
+# control gets hollowed out one "just this once" at a time, and in a template every
+# entry propagates as a taught reflex. On ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION, run
+# `pnpm clean --lockfile` then a plain `pnpm install` — wait the soak out.
 minimumReleaseAge: 14400 # 10 days
-minimumReleaseAgeExclude:
-  # Renovate security update: storybook@10.2.10
-  - storybook@10.2.10
-  # Renovate security update: turbo@2.9.14
-  - turbo@2.9.14
-  # Renovate security update: @vitest/browser@4.1.10
-  - "@vitest/browser@4.1.10"
