@@ -1,9 +1,5 @@
 [
 	{
-		"path": "./dist/index.cjs",
-		"limit": "10kb"
-	},
-	{
 		"path": "./dist/index.mjs",
 		"limit": "10kb"
 	}

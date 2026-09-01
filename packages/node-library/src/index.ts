@@ -1,1 +1,1 @@
-export {}
+export { greet } from './greeting.ts'

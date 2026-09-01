@@ -5,6 +5,11 @@
 		"module": "preserve",
 		"moduleResolution": "bundler",
 		"outDir": ".nowhere",
+		// The dependency graph here spans storybook, vitest-browser, tsdown and
+		// TypeScript 7 — a combination in which several published `.d.ts` files do not
+		// type-check against each other. Checking THIS package's source is the point;
+		// re-checking every dependency's shipped declarations is not.
+		"skipLibCheck": true,
 		"rewriteRelativeImportExtensions": true,
 		"verbatimModuleSyntax": true
 	}

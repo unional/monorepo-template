@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest'
-import * as index from '#node-library'
+import { greet } from '#node-library'
 
-it('should do something', () => {
-	expect(index).toBeDefined()
+it('greets by name', () => {
+	expect(greet('world')).toBe('Hello, world!')
 })
