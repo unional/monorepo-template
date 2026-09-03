@@ -18,6 +18,6 @@ jobs:
     # `skip-playwright` is deliberately left at its `false` default: this repo runs real
     # browser tests (vitest browser mode driving chromium through
     # `packages/node-library/vitest.storybook.config.ts`).
-    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@v2
+    uses: repobuddy/.github/.github/workflows/pnpm-verify.yml@v2
     with:
       os: '["ubuntu-latest"]'
