@@ -74,7 +74,7 @@ build within hours of publication. Wait the soak out rather than adding a
 > The worked example: an ESM node library built with tsdown, tested with vitest, and documented with
 > a storybook story that runs as a browser test.
 
-[github-action-url]: https://github.com/cyberuni/monorepo-template/actions/workflows/release.yml
-[github-release]: https://github.com/cyberuni/monorepo-template/actions/workflows/release.yml/badge.svg
+[github-action-url]: https://github.com/repobuddy/monorepo-template/actions/workflows/release.yml
+[github-release]: https://github.com/repobuddy/monorepo-template/actions/workflows/release.yml/badge.svg
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
