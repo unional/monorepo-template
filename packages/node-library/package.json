@@ -4,13 +4,13 @@
 	"private": true,
 	"description": "Your awesome node library",
 	"keywords": [],
-	"homepage": "https://github.com/cyberuni/monorepo-template",
+	"homepage": "https://github.com/repobuddy/monorepo-template",
 	"bugs": {
-		"url": "https://github.com/cyberuni/monorepo-template/issues"
+		"url": "https://github.com/repobuddy/monorepo-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cyberuni/monorepo-template.git",
+		"url": "https://github.com/repobuddy/monorepo-template.git",
 		"directory": "packages/node-library"
 	},
 	"license": "MIT",
