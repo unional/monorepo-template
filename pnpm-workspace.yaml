@@ -18,3 +18,11 @@ allowBuilds:
 # entry propagates as a taught reflex. On ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION, run
 # `pnpm clean --lockfile` then a plain `pnpm install` — wait the soak out.
 minimumReleaseAge: 14400 # 10 days
+#
+# `minimumReleaseAgeStrict` is what makes the paragraph above true. Without it pnpm's
+# soak runs LOOSE: it does not reject a too-young package, it appends that package to
+# `minimumReleaseAgeExclude` and installs it anyway. So the "deliberately NO exclude
+# list" above is not a state the template can hold on its own — loose mode writes the
+# list nobody decided to add, one entry per offending install. Strict turns the same
+# situation into ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION instead.
+minimumReleaseAgeStrict: true
